@@ -25,7 +25,7 @@ class LinkedList:
 
     '''Function for inserting a node to the beginning of the linked list'''
     def add_first(self, data):
-        node = ll.Node(data)
+        node = Node(data)
         if self.head is None:
             self.head = node
             return
@@ -33,12 +33,14 @@ class LinkedList:
         self.head = node
 
     '''Function for inserting a node to the end of the linked list'''
-    def add_last(self, node):
+    def add_last(self, data):
+        node = Node(data)
         if self.head is None:
             self.head = node
             return
-        for current_node in self:
-            pass
+        current_node = self.head
+        while current_node.next:
+            current_node.next = node
         current_node.next = node
 
     '''Function for pythonic iteration of the linked list'''
