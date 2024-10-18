@@ -1,7 +1,7 @@
 class Node:
     def __init__(self, data):
         self.data = data
-        self.head = None
+        self.next = None
 
     def __repr__(self):
         return self.data
@@ -18,4 +18,3 @@ class LinkedList:
             node = node.next
         nodes.append('None')
         return ' -> '.join(nodes)
-        
