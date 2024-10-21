@@ -39,9 +39,7 @@ class LinkedList:
         pass
 
     def peek(self):
-        #TODO Add functionaility to look at the first item in the list
-        pass
-
+        return self.head.data
     def pop(self):
         #TODO Add functionailty to remove the first item from the list
         pass
