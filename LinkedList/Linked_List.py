@@ -39,10 +39,16 @@ class LinkedList:
         pass
 
     def peek(self):
-        return self.head.data
+        if self.head is not None:
+            return self.head.data
+        
     def pop(self):
-        #TODO Add functionailty to remove the first item from the list
-        pass
+        if self.head is not None:
+            data = self.head.data
+            self.head = self.head.next
+            return data
+        else:
+            return None
 
     def __iter__(self):
         #TODO Add functionality to iterate through the linked list
