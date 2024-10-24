@@ -34,13 +34,22 @@ class LinkedList:
                 current_node = current_node.next
             current_node.next = node
 
-    def remove_item(self, item):
-        #TODO Add functionality to remove items from the list 
-        pass
-
     def peek(self):
         if self.head is not None:
             return self.head.data
+
+    def remove_first(self):
+        #TODO: Add a function to remove the first item in a list
+        pass
+
+    def remove_last(self):
+        #TODO: Add a function to remove the last item in a list
+        pass
+    
+    def remove_item(self, item):
+        #TODO: Add a function to remove a value from the list
+        pass
+        
         
     def pop(self):
         if self.head is not None:
