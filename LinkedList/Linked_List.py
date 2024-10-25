@@ -68,15 +68,6 @@ class LinkedList:
     def remove_item(self, item):
         #TODO: Add a function to remove a value from the list
         pass
-        
-        
-    def pop(self):
-        if self.head is not None:
-            data = self.head.data
-            self.head = self.head.next
-            return data
-        else:
-            return None
 
     def __iter__(self):
         #TODO Add functionality to iterate through the linked list
