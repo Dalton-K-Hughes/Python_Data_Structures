@@ -39,13 +39,20 @@ class LinkedList:
             return self.head.data
 
     def remove_first(self):
-        #TODO: Add a function to remove the first item in a list
-        pass
+        if self.head is None:
+            print('List is empty')
+            return
+        
+        if self.head.next is None:
+            self.head = None
+            return
+
+        self.head = self.head.next
 
     def remove_last(self):
         #TODO: Add a function to remove the last item in a list
         pass
-    
+
     def remove_item(self, item):
         #TODO: Add a function to remove a value from the list
         pass
