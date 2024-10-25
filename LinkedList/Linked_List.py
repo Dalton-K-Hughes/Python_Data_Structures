@@ -74,5 +74,10 @@ class LinkedList:
         pass
 
     def __repr__(self):
-        #TODO Add functionailty to display a linked list
-        pass
+        list = []
+        current_node = self.head
+        while current_node:
+            list.append(str(current_node.data))
+            current_node = current_node.next
+        list.append('None')
+        return ' -> '.join(list)
