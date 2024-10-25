@@ -34,6 +34,10 @@ class LinkedList:
                 current_node = current_node.next
             current_node.next = node
 
+    def add_item(self, index, data):
+        #TODO: Add functionailty to add an item at a specified index in the list
+        pass
+
     def peek(self):
         if self.head is not None:
             return self.head.data
@@ -63,7 +67,6 @@ class LinkedList:
             current_node = current_node.next
 
         current_node.next = None
-        
 
     def remove_item(self, item):
         #TODO: Add a function to remove a value from the list
