@@ -50,8 +50,20 @@ class LinkedList:
         self.head = self.head.next
 
     def remove_last(self):
-        #TODO: Add a function to remove the last item in a list
-        pass
+        if self.head is None:
+            print('List is empty')
+            return
+        
+        if self.head.next is None:
+            self.head = None
+            return
+
+        current_node = self.head
+        while current_node.next is not None and current_node.next.next is not None:
+            current_node = current_node.next
+
+        current_node.next = None
+        
 
     def remove_item(self, item):
         #TODO: Add a function to remove a value from the list
