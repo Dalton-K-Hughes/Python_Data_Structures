@@ -78,6 +78,8 @@ class LinkedList:
     def peek(self):
         if self.head is not None:
             return self.head.data
+        else:
+            print("List is Empty")
 
     def remove_first(self):
         if self.head is None:
