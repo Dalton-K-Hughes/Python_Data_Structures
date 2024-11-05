@@ -14,8 +14,10 @@ class Queue:
         self.size = 0
 
     def peek(self):
-        #TODO: Add functionality to look at the first item in the queue
-        pass
+        if self.head is not None:
+            return self.head.data
+        else:
+            print('Queue is empty')
 
     def pop(self):
         #TODO: Add functionality to remove the first item in the queue
