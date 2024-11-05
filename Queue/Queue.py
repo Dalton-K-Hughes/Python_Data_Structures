@@ -10,8 +10,8 @@ class Node:
 class Queue:
 
     def init(self):
-        #TODO: Add functionalty to init an empty queue
-        pass
+        self.head = None
+        self.size = 0
 
     def peek(self):
         #TODO: Add functionality to look at the first item in the queue
