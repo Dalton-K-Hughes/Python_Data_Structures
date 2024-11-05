@@ -1,6 +1,6 @@
 class Node:
 
-    def init(self, data):
+    def __init__(self, data):
         self.data = data
         self.next = None
 
@@ -9,7 +9,7 @@ class Node:
 
 class Queue:
 
-    def init(self):
+    def __init__(self):
         self.head = None
         self.size = 0
 
@@ -20,12 +20,38 @@ class Queue:
             print('Queue is empty')
 
     def pop(self):
-        #TODO: Add functionality to remove the first item in the queue
-        pass
+        if self.head is None:
+            print('Queue is Empty')
+            return
+        elif self.head.next is None:
+            data = self.head.data
+            self.head = None
+            self.size -= 1
+            return data
+        else:
+            data = self.head.data
+            self.head = self.head.next
+            self.size -= 1
+            return data
 
     def add_last(self, item):
-        #TODO: Add functionailty to add an item to the end of the queue
-        pass
+        if self.head is None:
+            node = Node(item)
+            self.head = node
+            self.size += 1
+            return
+        elif self.head.next is None:
+            node = Node(item)
+            self.head.next = Node
+            self.size += 1
+            return
+        else:
+            current_node = self.head
+            while current_node.next is not None:
+                current_node = current_node.next
+            node = Node(item)
+            current_node.next = node
+            return 
 
     def __iter__(self):
         #TODO: Add functionality to iterate through the queue
