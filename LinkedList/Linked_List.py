@@ -136,8 +136,10 @@ class LinkedList:
 
 
     def __iter__(self):
-        #TODO Add functionality to iterate through the linked list
-        pass
+        current = self.head
+        while current:
+            yield current.data
+            current = current.next
 
     def __repr__(self):
         list = []
