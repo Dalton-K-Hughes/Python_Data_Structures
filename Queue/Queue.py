@@ -54,8 +54,10 @@ class Queue:
             return 
 
     def __iter__(self):
-        #TODO: Add functionality to iterate through the queue
-        pass
+        current = self.head
+        while current:
+            yield current.data
+            current = current.next
 
     def __repr__(self):
         #TODO: Add functionality to show the queue
