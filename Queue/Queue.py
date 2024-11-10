@@ -42,7 +42,7 @@ class Queue:
             return
         elif self.head.next is None:
             node = Node(item)
-            self.head.next = Node
+            self.head.next = node
             self.size += 1
             return
         else:
@@ -60,5 +60,11 @@ class Queue:
             current = current.next
 
     def __repr__(self):
-        #TODO: Add functionality to show the queue
-        pass
+        current_node = self.head
+        list = []
+        while current_node:
+            list.append(str(current_node.data))
+            current_node = current_node.next
+        return str(list)
+
+
