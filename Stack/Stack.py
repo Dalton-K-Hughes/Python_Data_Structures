@@ -22,8 +22,17 @@ class Stack:
         pass
 
     def add_item(self, item):
-        #TODO: Add functionality to add items to the stack
-        pass
+
+        if self.head is None:
+            node = Node(item)
+            self.head = node
+            self.size += 1
+            return
+            
+        node = Node(item)
+        node.next = self.head
+        self.head = node
+        self.size += 1
 
     def pop(self):
         #TODO: Add functioanilty to remove an item from the stack
