@@ -39,9 +39,20 @@ class Stack:
         self.size += 1
 
     def pop(self):
-        #TODO: Add functioanilty to remove an item from the stack
-        pass
+        if self.head is None:
+            print('Stack is empty')
+            return
+        if self.head.next is None:
+            data = self.head.data
+            self.head = None
+            self.size -= 1
+            return data
+        data = self.head.data
+        self.head = self.head.next
+        self.size -= 1
+        return data
 
     def peek(self):
-        #TODO: Add functionailty to look at the first item in the stack
-        pass
+        if self.head is not None:
+            return self.head.data
+        print('Stack is empty')
