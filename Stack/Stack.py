@@ -6,7 +6,6 @@ class Node:
     def __repr__(self):
         return self.data
 
-
 class Stack:
 
     def __init__(self):
@@ -20,10 +19,6 @@ class Stack:
             lst.append(str(current_node.data))
             current_node = current_node.next
         return "\n".join(lst)
-
-    def __iter__(self):
-        #TODO: Add functionailty to create an iterator function for the stack
-        pass
 
     def add_item(self, item):
 
@@ -56,3 +51,9 @@ class Stack:
         if self.head is not None:
             return self.head.data
         print('Stack is empty')
+
+    def empty(self):
+        return self.size == 0
+
+    def size(self):
+        return self.size
