@@ -51,6 +51,7 @@ class Queue:
                 current_node = current_node.next
             node = Node(item)
             current_node.next = node
+            self.size += 1
             return 
 
     def __iter__(self):
@@ -67,4 +68,9 @@ class Queue:
             current_node = current_node.next
         return str(list)
 
+    def empty(self):
+        return self.size == 0
+
+    def size(self):
+        return self.size
 
