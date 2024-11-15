@@ -110,6 +110,7 @@ class LinkedList:
             current_node = current_node.next
 
         current_node.next = None
+        self.size -= 1
 
     def remove_item(self, item):
         if self.head is None:
@@ -149,3 +150,9 @@ class LinkedList:
             current_node = current_node.next
         list.append('None')
         return ' -> '.join(list)
+
+    def empty(self):
+        return self.size == 0
+
+    def size(self):
+        return self.size
