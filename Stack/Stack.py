@@ -14,8 +14,12 @@ class Stack:
         self.size = 0
 
     def __repr__(self):
-        #TODO: Add functionality to print the stack as a string
-        pass
+        lst = []
+        current_node = self.head
+        while current_node is not None:
+            lst.append(str(current_node.data))
+            current_node = current_node.next
+        return "\n".join(lst)
 
     def __iter__(self):
         #TODO: Add functionailty to create an iterator function for the stack
@@ -28,7 +32,7 @@ class Stack:
             self.head = node
             self.size += 1
             return
-            
+
         node = Node(item)
         node.next = self.head
         self.head = node
